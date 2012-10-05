@@ -27,7 +27,7 @@ if (count($lines) > 0)
 				$cats[$i] = trim($cats[$i]);
 			}
 
-			$res = cot_build_recentpostsbycat('recentitems.forums.index', $limit, 0, 0, $cats);
+			$res = cot_build_recentpostsbycat('recentitems.forums.index', $limit, 0, $cfg['plugin']['recentitems']['recentforumstitle'], $cats);
 			$t->assign('RECENT_POSTS_' . mb_strtoupper($box_name), $res);
 		}
 	}
